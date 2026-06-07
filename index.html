@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Heart Youth Summer BBQ Hangout</title>
+    <!-- Google Fonts: Outfit and Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Decorative Elements -->
+    <div class="sun"></div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+
+    <div class="container">
+        <!-- Main Form Card -->
+        <main class="card" id="form-card">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="badge">Youth Group Event</div>
+                <h1>Sacred Heart Youth <br><span class="highlight">Summer BBQ Hangout</span></h1>
+                <p class="subtitle">Fire up the grill! Summer is here, and it's time for good food, cool drinks, epic games, and awesome company. Grab your spot below!</p>
+            </header>
+
+            <!-- Event Details Grid -->
+            <div class="event-details">
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div class="detail-info">
+                        <h3>Date</h3>
+                        <p>Saturday, July 18th</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="detail-info">
+                        <h3>Time</h3>
+                        <p>5:00 PM onwards</p>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="detail-info">
+                        <h3>Where</h3>
+                        <p>Church Garden</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Progress -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+
+            <!-- Registration Form -->
+            <form id="registration-form" novalidate>
+                <!-- Section 1: Main Registrant Details -->
+                <div class="form-section">
+                    <h2><span class="section-num">1</span> Your Details</h2>
+                    
+                    <div class="input-group">
+                        <input type="text" id="full-name" name="fullName" required placeholder=" ">
+                        <label for="full-name">Full Name</label>
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <span class="error-msg">Please enter your name</span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Email Address</label>
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                        <span class="error-msg">Please enter a valid email address</span>
+                    </div>
+
+                    <!-- Youth Group Selector -->
+                    <div class="radio-section">
+                        <label class="radio-section-label">Youth Group Category</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="youthGroup" value="Adult" checked>
+                                <span class="radio-custom"></span>
+                                <span class="radio-text">Adult</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="youthGroup" value="Child">
+                                <span class="radio-custom"></span>
+                                <span class="radio-text">Child</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="dietary" name="dietary" placeholder=" ">
+                        <label for="dietary">Dietary Restrictions / Food Allergies (Optional)</label>
+                        <i class="fa-solid fa-carrot input-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Section 2: Guests / Plus One -->
+                <div class="form-section">
+                    <h2><span class="section-num">2</span> Bringing Friends?</h2>
+                    <p class="section-desc">Are you coming with anyone? Let us know so we can budget enough burgers!</p>
+                    
+                    <div class="select-group">
+                        <label for="guests-count">Number of guests coming with you</label>
+                        <div class="select-wrapper">
+                            <select id="guests-count" name="guestsCount">
+                                <option value="0">Just me (0 guests)</option>
+                                <option value="1">Me + 1 guest</option>
+                                <option value="2">Me + 2 guests</option>
+                                <option value="3">Me + 3 guests</option>
+                                <option value="4">Me + 4 guests</option>
+                                <option value="5">Me + 5 guests</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Guest Input Container -->
+                    <div id="guests-container" class="guests-container"></div>
+                </div>
+
+                <!-- Section 3: Volunteering -->
+                <div class="form-section">
+                    <h2><span class="section-num">3</span> Help Out (Optional)</h2>
+                    <p class="section-desc">Want to make this event awesome? Select how you'd like to lend a hand:</p>
+                    
+                    <div class="checkbox-grid">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="helperTasks" value="SETUP">
+                            <span class="checkbox-custom"><i class="fa-solid fa-check"></i></span>
+                            <span class="checkbox-text">Setup Crew</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="helperTasks" value="COOKING/GRILLING">
+                            <span class="checkbox-custom"><i class="fa-solid fa-check"></i></span>
+                            <span class="checkbox-text">Grilling Team</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="helperTasks" value="SERVING FOODS">
+                            <span class="checkbox-custom"><i class="fa-solid fa-check"></i></span>
+                            <span class="checkbox-text">Serving Food</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="helperTasks" value="CLEANUP">
+                            <span class="checkbox-custom"><i class="fa-solid fa-check"></i></span>
+                            <span class="checkbox-text">Cleanup Crew</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="helperTasks" value="GAMES & ACTIVITIES">
+                            <span class="checkbox-custom"><i class="fa-solid fa-check"></i></span>
+                            <span class="checkbox-text">Games & Activities</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="helperTasks" value="NOT AT THIS TIME">
+                            <span class="checkbox-custom"><i class="fa-solid fa-check"></i></span>
+                            <span class="checkbox-text">Not at this time</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Section 4: Comments -->
+                <div class="form-section">
+                    <h2><span class="section-num">4</span> Anything Else?</h2>
+                    <div class="input-group">
+                        <textarea id="comments" name="comments" placeholder=" " rows="3"></textarea>
+                        <label for="comments">Any additional comments or suggestions?</label>
+                        <i class="fa-solid fa-comment input-icon text-area-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Submit Button Container with animated grill fire/smoke -->
+                <div class="submit-container">
+                    <button type="submit" id="submit-btn" class="submit-btn">
+                        <span class="btn-text">Register Now!</span>
+                        <span class="btn-icon"><i class="fa-solid fa-fire-burner"></i></span>
+                    </button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Playful Thank You Screen (Initially Hidden) -->
+        <div class="card success-card hidden" id="success-card">
+            <div class="confetti-cannon"></div>
+            <div class="success-header">
+                <div class="success-checkmark-wrapper">
+                    <div class="success-checkmark"></div>
+                </div>
+                <h2>You're on the list! 🎉</h2>
+                <p class="success-subtitle">Get ready for a sizzlin' good time. We've received your registration!</p>
+            </div>
+
+            <!-- Generated Playful BBQ Illustration -->
+            <div class="illustration-container">
+                <img src="assets/bbq_success_grill.png" alt="Happy BBQ character waving" class="success-illustration">
+                <div class="grill-smoke-ambient">
+                    <span class="puff puff-1"></span>
+                    <span class="puff puff-2"></span>
+                    <span class="puff puff-3"></span>
+                </div>
+            </div>
+
+            <div class="success-info-box">
+                <div class="info-row">
+                    <span class="label">Event:</span>
+                    <strong class="val">Youth Summer BBQ Hangout</strong>
+                </div>
+                <div class="info-row">
+                    <span class="label">When:</span>
+                    <strong class="val">Saturday, July 18th @ 5:00 PM</strong>
+                </div>
+                <div class="info-row">
+                    <span class="label">Where:</span>
+                    <strong class="val">Sacred Heart Church Garden</strong>
+                </div>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-section">
+                <h3>Countdown to Fire Up</h3>
+                <div class="countdown-grid">
+                    <div class="countdown-item">
+                        <span class="count-num" id="days">00</span>
+                        <span class="count-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="count-num" id="hours">00</span>
+                        <span class="count-label">Hrs</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="count-num" id="minutes">00</span>
+                        <span class="count-label">Mins</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="count-num" id="seconds">00</span>
+                        <span class="count-label">Secs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-actions">
+                <button id="add-calendar-btn" class="action-btn secondary-btn">
+                    <i class="fa-solid fa-calendar-plus"></i> Add to Google Calendar
+                </button>
+                <button id="register-another-btn" class="action-btn primary-btn">
+                    <i class="fa-solid fa-arrow-rotate-left"></i> Register Another Person
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <!-- Frontend Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
