@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Date format: YYYYMMDDTHHMMSSZ (UTC preferred, but we can do local style as well)
         // 2026-07-18 17:00:00 (5 PM) to 2026-07-18 21:00:00 (9 PM)
-        const dates = "20260718T170000/20260718T210000";
+        const dates = "20260718T163000/20260718T210000";
         
         const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}&sf=true&output=xml`;
         window.open(calendarUrl, '_blank');
