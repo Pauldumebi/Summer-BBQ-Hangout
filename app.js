@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5UxebFf-_q-lcCm3CRwt2YN-fWJ9wd3rA8Uktcu71v2m-q0FcWst-dSJrt6unorSlpQ/exec'; 
 
     // Target Event Date for Countdown: Saturday, July 18, 2026 at 5:00 PM
-    const eventDate = new Date('2026-07-18T17:00:00').getTime();
+    const eventDate = new Date('2026-07-18T16:30:00').getTime();
 
     // ==========================================
     // 1. DYNAMIC GUEST INPUT GENERATION
